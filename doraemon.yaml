@@ -177,6 +177,8 @@ segments:
       - [0x72610, asm]
       - [0x73660, asm]
 
+      - [0x76BB0, asm]
+
       - [0x789F0, c]
 
       - [0x78DE0, c]
@@ -581,6 +583,8 @@ segments:
       - [0xC6440, .rodata, 70DF0] 
 
       - [0xC6730, rodata]
+
+      - [0xC6A10, rodata]
 
       - [0xC6A50, .rodata, 789F0] 
       
