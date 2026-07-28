@@ -3,9 +3,57 @@
 
 #include "ultra64.h"
 
-//todo fill
+#define ZZ_ITEM_MAX_GADGETS 32
+
 typedef enum DataItem{
-    ZZ_ITEM_ANYWHERE_DOOR = 0x80000,
+    // GADGETS
+    ZZ_ITEM_AIR_CANNON =  0,
+    ZZ_ITEM_SHOCKWAVE_PISTOL =  1,
+    ZZ_ITEM_DANGER_BOMB =  2,
+    ZZ_ITEM_CHAMPION_GLOVES =  3,
+    ZZ_ITEM_GENE_MICROPHONE =  4,
+    ZZ_ITEM_UPGRADE_SPRAY =  5,
+    ZZ_ITEM_ULTRA_STOPWATCH =  6,
+    ZZ_ITEM_ANTI_DISASTER_STICKER =  7,
+    ZZ_ITEM_MOMOTARO_DUMPLINGS =  8,
+    ZZ_ITEM_SMALL_LIGHT =  9,
+    ZZ_ITEM_PASS_LOOP =  10,
+    ZZ_ITEM_NOSE_TUBE =  11,
+    ZZ_ITEM_TIME_CLOTH =  12,
+    ZZ_ITEM_DEEP_SEA_CREAM =  13,
+    ZZ_ITEM_ADAPTATION_LIGHT =  14,
+    ZZ_ITEM_JACK_BEAN =  15,
+    ZZ_ITEM_ANYTHING_STEERING_WHEEL =  16,
+    ZZ_ITEM_BAMBOO_COPTER =  17,
+    ZZ_ITEM_COMPACTION_CLOUD_GAS =  18,
+    ZZ_ITEM_ANYWHERE_DOOR =  19,
+    ZZ_ITEM_UNDERWATER_BUGGY =  20,
+    ZZ_ITEM_TIME_TV =  21,
+    ZZ_ITEM_DRESS_UP_CAMERA =  22,
+    ZZ_ITEM_CAMPING_CAPSULE =  23,
+    ZZ_ITEM_TRANSLATION_GUMMY =  24,
+    ZZ_ITEM_WHAT_IF_PHONE_BOOTH =  25,
+    ZZ_ITEM_MOBILE_FISHING_LAKE =   26,
+    ZZ_ITEM_MOUNTAIN_ECHO_RECORDER =  27,
+    ZZ_ITEM_STRING_PHONE_WITHOUT_A_STRING =  28,
+    ZZ_ITEM_STORYBOOK_SHOES =  29,
+    ZZ_ITEM_MINI_DORA =  30,
+    ZZ_ITEM_VOICE_THICKENER =  31,
+    // STONEs
+    ZZ_ITEM_GREEN_STONE =  32,
+    ZZ_ITEM_GREEN_STONE_1 =  33, //find from which level
+    ZZ_ITEM_GREEN_STONE_2 =  34, //find from which level
+    ZZ_ITEM_GREEN_STONE_3 =  35, //find from which level
+    ZZ_ITEM_BLUE_STONE =  36,
+    ZZ_ITEM_BLUE_STONE_1 =  37, //find from which level
+    ZZ_ITEM_BLUE_STONE_2 =  38, //find from which level
+    ZZ_ITEM_BLUE_STONE_3 =  39, //find from which level
+    ZZ_ITEM_RED_STONE =  40, 
+    ZZ_ITEM_RED_STONE_1 =  41, //find from which level
+    ZZ_ITEM_RED_STONE_2 =  42, //find from which level
+    ZZ_ITEM_RED_STONE_3 =  43, //find from which level
 }ZZDataItem;
+
+#define CDATA_ITEM(x) (1ULL << (x))
 
 #endif

@@ -6,6 +6,7 @@
 #include "13940.h"
 #include "7F4E0.h"
 #include "9320.h"
+#include "zzGameData.h"
 
 #include "libc/math.h"
 
@@ -142,7 +143,7 @@ void func_8003A274(s16 idx){
             break;
         case 1:
             if(func_80024E0C(idx, D_80159178->unk48[cdata.unk41].unk0) < 350.0f){
-                if(cdata.item & 0x80000){
+                if(cdata.item & CDATA_ITEM(ZZ_ITEM_ANYWHERE_DOOR)){
                     actor->actorVars.varA4.integer = 1;
                     func_80022F20(idx, func_80039E90);
                     return;

@@ -12,6 +12,7 @@
 #include "7FC0.h"
 #include "7310.h"
 #include "common.h"
+#include "zzGameData.h"
 
 #include "libc/math.h"
 
@@ -236,10 +237,10 @@ void func_800785CC(Actor* actor){
         actor->pos.z = z;
 
         if(6500.0f < y && actor->actorVars.varB8.shorts[0] != 0xB){
-            if(cdata.item & 0x20000){
+            if(cdata.item & CDATA_ITEM(ZZ_ITEM_BAMBOO_COPTER)){
                 v1 = 0;
             }
-            else if(cdata.item & 0x40000000000){
+            else if(cdata.item & CDATA_ITEM(ZZ_ITEM_RED_STONE_2)){
                 v1 = 0x26;
             }
             else{

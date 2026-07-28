@@ -17,6 +17,8 @@
 #include "9320.h"
 #include "libc/math.h"
 
+#include "zzGameData.h"
+
 #include "common.h"
 
 extern f32 D_80159170;
@@ -107,7 +109,7 @@ void func_80037AE0(s16 idx){
                 
                 break;
             case 0x33:
-                cdata.item |= 0x40;
+                cdata.item |= CDATA_ITEM(ZZ_ITEM_ULTRA_STOPWATCH);
 
                 if(cdata.unk70 == 0){
                     func_80038F4C();
@@ -121,7 +123,7 @@ void func_80037AE0(s16 idx){
                 actor->actorVars.varDC.integer = temp1;
                 break;
             case 0x24:
-                cdata.item |= 0x80;
+                cdata.item |= CDATA_ITEM(ZZ_ITEM_ANTI_DISASTER_STICKER);
                 if (cdata.unk6E == 0) {
                     cdata.unk74 = seqContexts[0].unk0;
                 }
@@ -134,7 +136,7 @@ void func_80037AE0(s16 idx){
                 actor->actorVars.varDC.integer = temp1;
                 break;
             case 0x38:
-                cdata.item |= 0x20;
+                cdata.item |= CDATA_ITEM(ZZ_ITEM_UPGRADE_SPRAY);
 
                 func_80008C6C(D_802BDE54, 0);
                 actor->actorVars.varDC.integer = temp1;
@@ -142,7 +144,7 @@ void func_80037AE0(s16 idx){
                 actor->flags |= 0x1000;
                 break;
             case 0x42:
-                cdata.item |= 0x40000000;
+                cdata.item |= CDATA_ITEM(ZZ_ITEM_MINI_DORA);
                 cdata.unk24++;
                 func_80008C6C(D_802BDE56, 0);
                 func_80022F20(idx, func_80039000);
@@ -185,7 +187,7 @@ void func_800380BC(s16 idx){
         if(temp != -1){
             switch (actor->unk48) {
                 case 0x33:
-                    cdata.item |= 0x40; 
+                    cdata.item |= CDATA_ITEM(ZZ_ITEM_ULTRA_STOPWATCH); 
 
                     if (cdata.unk70 == 0) {
                         func_80038F4C();
@@ -196,7 +198,7 @@ void func_800380BC(s16 idx){
                     cdata.unk76 = cdata.unk77;
                     break;
                 case 0x24:
-                    cdata.item |= 0x80;
+                    cdata.item |= CDATA_ITEM(ZZ_ITEM_ANTI_DISASTER_STICKER);
                     if (cdata.unk6E == 0) {
                         cdata.unk74 = seqContexts[0].unk0;
                     }
@@ -445,7 +447,7 @@ void func_80038A0C(s16 idx){
 
         if(1);
 
-        cdata.item |= 0x20;
+        cdata.item |= CDATA_ITEM(ZZ_ITEM_UPGRADE_SPRAY);
 
         func_80008C6C(D_802BDE54, 0);
         func_80023FCC(idx);
@@ -593,7 +595,7 @@ s32 func_80039110(){
     u16 count = 0;
     u16 i;
 
-    for(i = 0; i < 32; i++){
+    for(i = 0; i < ZZ_ITEM_MAX_GADGETS; i++){
         if(cdata.item & (1ULL << i)){
             count++;
         }
