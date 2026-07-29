@@ -27,8 +27,8 @@ typedef struct cdata_struct {
     u8 nextstg;
     u8 unk1E[0x2];
     u16 unk20;
-    u16 unk22;
-    u16 unk24;
+    u16 bells;
+    u16 lives;
     u16 unk26;
     u64 item;
     s32 unk30;

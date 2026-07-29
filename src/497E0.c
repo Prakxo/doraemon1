@@ -59,7 +59,7 @@ void func_80048CD4(s16 idx){
             break;
         case 1:
             if(temp < 100.0f){
-                actor->actorVars.varA0.integer = 0x3C;
+                actor->actorVars.varA0.integer = 60;
                 actor->status = 2;
             }
             break;
@@ -87,11 +87,11 @@ void func_80048CD4(s16 idx){
 
             if(actor->actorVars.varA0.integer < 0){
                 func_80008E10(0x17, 2, idx);
-                actor->actorVars.varA0.integer = 0x3C;
+                actor->actorVars.varA0.integer = 60;
                 func_80022F48(idx, 3);
                 actor->status = 4;
             }
-            if(actor->actorVars.varA0.integer == 0x1C){
+            if(actor->actorVars.varA0.integer == 28){
                 temp2 = func_80023644(5, 0x141, 0.0f, 0.0f, 0.0f, 0.0f, actor->rot.y, 0.0f);
                 
                 if(temp2 != -1){
@@ -127,7 +127,7 @@ void func_80048FB4(s16 idx){
             actor->actorVars.varA8.fp = actor->pos.z;
 
             if(actor->actorVars.varA0.integer != 0){
-                actor->health = 0x258;
+                actor->health = 600;
                 actor->status = 0x1F4;
                 
                 actor->scale.x = 8.0f;
@@ -140,7 +140,7 @@ void func_80048FB4(s16 idx){
             break;
         case 0x32:
             func_80022F48(idx, 2);
-            actor->actorVars.varAC.integer = 0x3C;
+            actor->actorVars.varAC.integer = 60;
             actor->status = 0x33;
             break;
         case 0x33:
@@ -163,7 +163,7 @@ void func_80048FB4(s16 idx){
             actor->actorVars.varB0.fp = random(0) % 400U + actor->actorVars.varA4.fp - 200.0f;
             actor->actorVars.varB4.fp = random(0) % 400U + actor->actorVars.varA8.fp - 200.0f;
 
-            actor->actorVars.varAC.integer = 0x3C;
+            actor->actorVars.varAC.integer = 60;
             actor->status = 0x65;
             
             break;
@@ -172,7 +172,7 @@ void func_80048FB4(s16 idx){
             GET_ACTOR_PTR(idx)->actorVars.varAC.integer--;
 
             if(actor->actorVars.varAC.integer <= 0){
-                actor->actorVars.varAC.integer = 0x78;
+                actor->actorVars.varAC.integer = 120;
                 actor->status = 0x66;
                 actor->actorVars.varBC.fp = 0.0f;
             }
@@ -187,7 +187,7 @@ void func_80048FB4(s16 idx){
 
             if(func_80024EA4(idx, actor->actorVars.varB0.fp, actor->pos.y, actor->actorVars.varB4.fp) < 30.0f){
                 func_80022F48(idx, 0);
-                actor->actorVars.varAC.integer = 0x3C;
+                actor->actorVars.varAC.integer = 60;
                 actor->status = 0x67;
             }
 
@@ -240,13 +240,13 @@ void func_80048FB4(s16 idx){
 
             if(actor->actorVars.varAC.integer <= 0){
                 func_80022F48(idx, 1);
-                actor->actorVars.varAC.integer = 0x26;
+                actor->actorVars.varAC.integer = 38;
                 actor->status = 0x96;
                 actor->dir.x = 0.0f;
                 actor->dir.z = 0.0f;
             }
 
-            if(actor->actorVars.varAC.integer < 0x28){
+            if(actor->actorVars.varAC.integer < 40){
                 actor->dir.x *= 0.95;
                 actor->dir.z *= 0.95;
             }
@@ -319,7 +319,7 @@ void func_80048FB4(s16 idx){
                     break;
             }
 
-            actor->actorVars.varAC.integer = 0xC8;
+            actor->actorVars.varAC.integer = 200;
             actor->status = 0x1F6;
             
             break;
@@ -349,7 +349,7 @@ void func_80048FB4(s16 idx){
         case 0x1F8:
             if(actor->dir.x < 0.1 && actor->dir.z < 0.1){
                 actor->actorVars.varC8.integer = 1 - actor->actorVars.varC8.integer;
-                actor->actorVars.varAC.integer = 0x78;
+                actor->actorVars.varAC.integer = 120;
                 actor->status = 0x1F9;
             }
 

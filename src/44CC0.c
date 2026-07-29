@@ -809,7 +809,7 @@ void func_80046238(s16 idx){
         case 0:
             actor->rot.y += 90.0f;
             actor->unk8 |= 1;
-            actor->health = 0x140;
+            actor->health = 320;
 
             NORM_ANGLE(actor->rot.y);
 
@@ -819,8 +819,8 @@ void func_80046238(s16 idx){
 
             NORM_ANGLE(actor->rot.y);         
 
-            actor->actorVars.varD8.integer = 0xC8;
-            actor->actorVars.varC8.integer = 0xC8;
+            actor->actorVars.varD8.integer = 200;
+            actor->actorVars.varC8.integer = 200;
             actor->status = 1;
             actor->actorVars.varE0.fp = actor->dir.x;
             actor->actorVars.varDC.fp = actor->dir.z;
@@ -833,7 +833,7 @@ void func_80046238(s16 idx){
             actor->actorVars.varC8.integer--;
             
             if(actor->actorVars.varC8.integer <= 0){
-                actor->actorVars.varC8.integer = 0x5A;
+                actor->actorVars.varC8.integer = 90;
                 actor->status = 2;
             }
             break;
@@ -889,7 +889,7 @@ void func_80046238(s16 idx){
 
             if(actor->actorVars.varC8.integer <= 0){
                 func_80008E10(0x5C, 2, idx);
-                actor->actorVars.varC8.integer = 0x78;
+                actor->actorVars.varC8.integer = 120;
                 actor->actorVars.varC0.fp = 0.05f;
                 actor->status = 8;
             }
@@ -939,7 +939,7 @@ void func_8004681C(s16 idx){
     switch(actor->status){
         case 0:
             actor->actorVars.varA4.integer = 0;
-            actor->actorVars.varA0.integer = 0x64;
+            actor->actorVars.varA0.integer = 100;
             actor->status = 1;
             break;
         case 1:
@@ -953,7 +953,7 @@ void func_8004681C(s16 idx){
             actor->actorVars.varA0.integer--;
 
             if(actor->actorVars.varA0.integer < 0){
-                actor->actorVars.varA0.integer = 0x64;
+                actor->actorVars.varA0.integer = 100;
                 actor->status = 1;
             }
             break;
@@ -1030,7 +1030,7 @@ void func_800468C4(s16 idx){
             if(actor->a >= 254){
                 actor->flags &= ~0x10;
                 actor->a = 255;
-                actor->actorVars.varB0.integer = 0x28;
+                actor->actorVars.varB0.integer = 40;
                 actor->status = 102;
                 actor->dir.z = 0.0f;
                 actor->dir.x = 0.0f;
@@ -1068,7 +1068,7 @@ void func_800468C4(s16 idx){
             break;
         case 150:
             func_80022F48(idx, 2);
-            actor->actorVars.varB0.integer = 0x22;
+            actor->actorVars.varB0.integer = 34;
             actor->actorVars.varB4.integer = random(0) % 4U;
             actor->status = 151;
             break;
@@ -1161,7 +1161,7 @@ void func_80047084(s16 idx){
             }
             else if(actor->actorVars.varA0.integer < 0){
                 actor->status = 4; 
-                actor->actorVars.varA0.integer = 0x168;
+                actor->actorVars.varA0.integer = 360;
             }
             break;
         case 3:
@@ -1177,7 +1177,7 @@ void func_80047084(s16 idx){
             }
             else if(actor->actorVars.varA0.integer < 0){
                 actor->status = 4;
-                actor->actorVars.varA0.integer = 0x168;
+                actor->actorVars.varA0.integer = 360;
             }
             break;
         case 4:
@@ -1193,7 +1193,7 @@ void func_80047084(s16 idx){
             }
             else if(actor->actorVars.varA0.integer < 0){
                 actor->status = 2; 
-                actor->actorVars.varA0.integer = 0x168;
+                actor->actorVars.varA0.integer = 360;
             }
             break;
         case 5:

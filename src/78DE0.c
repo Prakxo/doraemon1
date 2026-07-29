@@ -100,8 +100,8 @@ void func_8007835C(Actor* actor){
         if(D_800F3920.unk0 == 0){
             D_800E69C0.unk0 = 1;
 
-            if(cdata.unk24 != 0){
-                cdata.unk24--;
+            if(cdata.lives != 0){
+                cdata.lives--;
                 cdata.unk42 = 1;
                 
                 D_800E69C0.unk0 = 1;

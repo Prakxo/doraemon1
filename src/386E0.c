@@ -95,15 +95,15 @@ void func_80037AE0(s16 idx){
         switch(temp){
             case 0x15:
                 func_80008C6C(D_802BDE50, 0);
-                cdata.unk22++;
+                cdata.bells++;
                 func_80022F20(idx, func_8002CF48);
                 break;
             case 0x16:
                 func_80008C6C(D_802BDE52, 0);
-                GET_ACTOR_PTR(temp1)->health += 0x32;
+                GET_ACTOR_PTR(temp1)->health += 50;
 
-                if(GET_ACTOR_PTR(temp1)->health >= 0xFB){
-                    GET_ACTOR_PTR(temp1)->health = 0xFA;
+                if(GET_ACTOR_PTR(temp1)->health >= 251){
+                    GET_ACTOR_PTR(temp1)->health = 250;
                 }
                 func_80022F20(idx, func_80039000);
                 
@@ -145,7 +145,7 @@ void func_80037AE0(s16 idx){
                 break;
             case 0x42:
                 cdata.item |= CDATA_ITEM(ZZ_ITEM_MINI_DORA);
-                cdata.unk24++;
+                cdata.lives++;
                 func_80008C6C(D_802BDE56, 0);
                 func_80022F20(idx, func_80039000);
                 break;
@@ -485,7 +485,7 @@ void func_80038BDC(s16 idx){
         case 2:
             if(D_80141CB0[idx].unk0 != -1){
                 func_80008C6C(0xDB, 0);
-                cdata.unk22++;
+                cdata.bells++;
                 func_80022F20(idx, func_8002CF48);
             }
             else{
@@ -596,7 +596,7 @@ s32 func_80039110(){
     u16 i;
 
     for(i = 0; i < ZZ_ITEM_MAX_GADGETS; i++){
-        if(cdata.item & (1ULL << i)){
+        if(cdata.item & CDATA_ITEM(i)){
             count++;
         }
     }
@@ -910,7 +910,7 @@ void func_80039B8C(s16 idx){
 
     if(D_80141CB0[idx].unk0 != -1){
         func_80008C6C(0xDA, 0);
-        cdata.unk22++;
+        cdata.bells++;
         func_80022F20(idx, func_8002CF48);
     }
 }

@@ -85,7 +85,7 @@ void func_8002D394(s16 idx){
 
     switch(GET_ACTOR_PTR(idx)->status){
         case 0:
-            actor->health = 0xFA;
+            actor->health = 250;
             actor->unk4E = 2;
             actor->unk6C = 6;
             actor->actorVars.varA4.fp = D_80159170;
@@ -102,7 +102,7 @@ void func_8002D3FC(s16 idx){
         case 0:
             actor->actorVars.varA4.fp = D_80159170;
             actor->dir.y = D_80159170 / 2;
-            actor->health = 0xFA;
+            actor->health = 250;
             actor->unk4E = 2;
             actor->unk6C = 6;
             
@@ -135,7 +135,7 @@ void func_8002D518(s16 idx){
         case 0:
             actor->actorVars.varA4.fp = D_80159170;
             actor->dir.y = D_80159170 / 2;
-            actor->health = 0xFA;
+            actor->health = 250;
             actor->unk4E = 0;
 
             func_80008C6C(D_802BDE4C, 1);
@@ -383,7 +383,7 @@ void func_8002DB90(s16 idx){
             break;
     }
     if(D_80141CB0[idx].unk4 != -1){
-        func_80030D0C(D_80141CB0[idx].unk4, 0xA, 2);
+        func_80030D0C(D_80141CB0[idx].unk4, 10, 2);
         func_80023FCC(idx);
     }
 }
@@ -442,7 +442,7 @@ void func_8002DEF0(s16 idx){
             break;
     }
     if(D_80141CB0[idx].unk4 != -1){
-        func_80030D0C(D_80141CB0[idx].unk4, 0xA, 2);
+        func_80030D0C(D_80141CB0[idx].unk4, 10, 2);
         func_80023FCC(idx);
     }
 }
@@ -560,7 +560,7 @@ void func_8002E5F0(s16 idx){
             
 
             if(D_80141CB0[idx].unk4 != -1){
-                func_80030D0C(D_80141CB0[idx].unk4, 0x19, 0x10);
+                func_80030D0C(D_80141CB0[idx].unk4, 25, 0x10);
             }
 
             actor->actorVars.varA8.integer--;
@@ -753,7 +753,7 @@ void func_8002ECD0(s16 idx){
         }
     }
     if(D_80141CB0[idx].unk4 != -1){
-        func_80030D0C(D_80141CB0[idx].unk4, 0xA, 0x400);
+        func_80030D0C(D_80141CB0[idx].unk4, 10, 0x400);
         func_80023FCC(idx);
     }
 }
