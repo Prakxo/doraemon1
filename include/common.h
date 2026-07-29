@@ -23,12 +23,18 @@ typedef struct D_801591C0_struct_unk48 {
     u8 unk8[0x60];
 } D_801591C0_struct_unk48;
 
+typedef struct D_801591C0_struct_unk8{
+    f32 unk0;
+    u8 unk4[0x64];
+}D_801591C0_struct_unk8;
+
 typedef struct D_80159178_struct {
     u8 unk0;
     u8 unk1;
     u16 unk2;
     u16 unk4;
-    u8 unk6[0x6];
+    u8 unk6[0x2];
+    D_801591C0_struct_unk8 *unk8[1];
     f32 unkC;
     f32 unk10;
     f32 unk14;
@@ -178,12 +184,23 @@ typedef struct D_801414A8_struct {
 
 extern D_801414A8_struct* D_801414A8;
 
+typedef struct D_801AF8C4_struct_unkC{
+    f32 unk0; 
+    f32 unk4;
+    f32 unk8;
+    u16 unkC; 
+    u16 unkE; 
+    s16 unk10; 
+    u16 unk12; 
+    u8 unk14[0x10];
+}D_801AF8C4_struct_unkC;
+
 typedef struct D_801AF8C4_struct{
     u8 unk0[0x4];
     s16 unk4;
     s16 unk6;
     s32 unk8;
-    s32 unkC;
+    D_801AF8C4_struct_unkC* unkC;
     s16 unk10;
     s16 unk12;
     f32 unk14;
@@ -347,21 +364,31 @@ typedef struct D_801D5F30_struct{
 extern D_801D5F30_struct D_801D5F30[];
 
 typedef struct D_802BD494_struct{
-    u8 unk0[0x96];
-    s16 unk96;
-    u16 unk98;
-    s16 unk9A;
+    s16 unk0;
+    u8 unk2[0x8];
+    s16 unkA;
+    u8 unkC[0x2];
+    u16 unkE;
+    u16 unk10;
+    s16 unk12;
+    f32 unk14;
+    u8 unk18[0x4];
 }D_802BD494_struct;
 
-extern D_802BD494_struct D_802BD494;
+extern D_802BD494_struct D_802BD494[6];
+
+typedef struct D_803361C0_struct_unk4{
+    u8 unk0[0x8];
+}D_803361C0_struct_unk4;
 
 typedef struct D_803361C0_struct{
-    u8 unk0[0x3C];
-    s32 unk3C;
-    s32 unk40;
-    u16 unk44;
+    s32 unk0;
+    D_803361C0_struct_unk4* unk4;
+    u16 unk8;
+    u16 unkA;
 }D_803361C0_struct;
-extern D_803361C0_struct D_803361C0;
+
+extern D_803361C0_struct D_803361C0[];
 
 typedef struct D_802BD2A4_struct{
     s8 unk0;
@@ -409,5 +436,21 @@ typedef struct D_800F3940_struct{
 
 extern D_800F3940_struct* D_800F3940[4];
 
+typedef struct D_803050E4_struct{
+    s16 unk0;
+    s16 unk2;
+    s16 unk4;
+    s16 unk6;
+    s16 unk8;
+    s16 unkA;
+}D_803050E4_struct;
+
+extern D_803050E4_struct** D_803050E4[];
+
+typedef struct D_80336980_struct{
+    s16 unk0;
+    s16 unk2;
+} D_80336980_struct;
+extern D_80336980_struct** D_80336980[1];
 
 #endif

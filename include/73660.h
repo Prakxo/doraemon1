@@ -8,7 +8,7 @@ struct Actor;
 f32 func_80074E68(f32 ,f32);
 s32 func_80076FA0(u16); 
 void func_80076F2C(u16);
-void func_800778C0(u32, s32, u16);
+void func_800778C0(u16, u16, u16);
 u16 func_80077050(void);
 void func_80076B64(s16);
 s32 func_80077548(void);

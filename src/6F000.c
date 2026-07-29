@@ -152,12 +152,12 @@ void func_8006E400(s16 idx) {
             actor2 = GET_ACTOR_PTR(D_800E69C0.unk3E[1].ishort);
 
             actor2->unk44 = D_802BD630;
-            (&D_801414A0[actor2->unk38])[D_803361C0.unk44]->unk48 = D_803361C0.unk3C;
-            (&D_801414A0[actor2->unk38])[D_803361C0.unk44]->unk4C = D_803361C0.unk40;
+            (&D_801414A0[actor2->unk38])[D_803361C0[5].unk8]->unk48 = D_803361C0[5].unk0;
+            (&D_801414A0[actor2->unk38])[D_803361C0[5].unk8]->unk4C = D_803361C0[5].unk4;
             actor2->unk4E = 2;
-            actor2->unk6C = D_802BD494.unk96;
+            actor2->unk6C = D_802BD494[5].unkA;
 
-            func_80074D74(actor2, D_802BD494.unk9A);
+            func_80074D74(actor2, D_802BD494[5].unkE);
             func_80022F48(D_800E69C0.unk3E[1].ishort, 2);
 
             actor->actorVars.varAC.integer = 0;

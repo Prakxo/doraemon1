@@ -301,7 +301,7 @@ void func_800385C0(s16 idx){
     Actor* actor = GET_ACTOR_PTR(idx);
     s32 temp;
     s16 temp2 = D_80159178->unk48[cdata.unk41].unk0;
-    s16 pad;
+    u16 temp3;
     s16 temp1;
     s16 pad1;
     s32 pad2;
@@ -334,7 +334,7 @@ void func_800385C0(s16 idx){
                 actor->status = 10;
             }
 
-            func_80024874(idx, ((0x3C - actor->actorVars.varA0.integer) / 60.0f) * actor->actorVars.varA4.fp);
+            func_80024874(idx, ((60 - actor->actorVars.varA0.integer) / 60.0f) * actor->actorVars.varA4.fp);
 
             actor->pos.y += 0.8;
             actor->rot.y = func_8000ADE0(actor->rot.y + 17.0);
@@ -360,18 +360,18 @@ void func_800385C0(s16 idx){
             }
             else{
                 if(D_802BDB7C[temp1] >= 0x2D){
-                    temp = 3;
+                    temp3 = 3;
                 }
                 else{
                     if(D_802BDB7C[temp1] >= 0x20){
-                        temp = 2;
+                        temp3 = 2;
                     }
                     else{
-                        temp = 1;
+                        temp3 = 1;
                     }
                 }
 
-                func_800778C0(D_802BDB7C[temp1], temp, 6U);
+                func_800778C0(D_802BDB7C[temp1], temp3, 6U);
             }
 
             actor->status = 15;
@@ -591,7 +591,7 @@ void func_80039000(s16 idx){
     }
 }
 
-s32 func_80039110(){
+u16 func_80039110(){
     u16 count = 0;
     u16 i;
 
