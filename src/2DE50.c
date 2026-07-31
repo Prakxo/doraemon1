@@ -166,16 +166,16 @@ void func_8002D5F8(s16 idx){
         case 1:
             t2 = actor->unk6A;
             
-            if(D_800F3940[0]->unk0[11] == 1){
+            if(D_800F3940[0]->unk0.unk0[11] == 1){
                 t2 = 0;
             }
-            if(D_800F3940[0]->unk0[10] == 1){
+            if(D_800F3940[0]->unk0.unk0[10] == 1){
                 t2 = 6;
             }
-            if(D_800F3940[0]->unk0[9] == 1){
+            if(D_800F3940[0]->unk0.unk0[9] == 1){
                 t2 = 0xA;    
             }
-            if(D_800F3940[0]->unk0[8] == 1){
+            if(D_800F3940[0]->unk0.unk0[8] == 1){
                 t2 = 0xB;
             }
             if(t2 != actor->unk6A){
@@ -202,16 +202,16 @@ void func_8002D6BC(s16 idx){
         case 1:
             t2 = actor->actorVars.varCC.uchars[0];
             
-            if(D_800F3940[0]->unk0[11] == 1){
+            if(D_800F3940[0]->unk0.unk0[11] == 1){
                 t2 = 0;
             }
-            if(D_800F3940[0]->unk0[10] == 1){
+            if(D_800F3940[0]->unk0.unk0[10] == 1){
                 t2 = 2;
             }
-            if(D_800F3940[0]->unk0[9] == 1){
+            if(D_800F3940[0]->unk0.unk0[9] == 1){
                 t2 = 4;    
             }
-            if(D_800F3940[0]->unk0[8] == 1){
+            if(D_800F3940[0]->unk0.unk0[8] == 1){
                 t2 = 3;
             }
             if(t2 != actor->actorVars.varCC.uchars[0]){
@@ -1170,7 +1170,7 @@ void func_800300F4(s16 idx){
     s32 sp34;
     s32 pad;
     
-    if(D_800F3940[1]->unk0[11] == 1){
+    if(D_800F3940[1]->unk0.unk0[11] == 1){
         if(GET_ACTOR_PTR(idx)->actorVars.varAC.integer < 0x24){
             GET_ACTOR_PTR(idx)->actorVars.varAC.integer++;
         }
@@ -1179,7 +1179,7 @@ void func_800300F4(s16 idx){
         }
 
     }
-    else if(D_800F3940[1]->unk0[10] == 1){
+    else if(D_800F3940[1]->unk0.unk0[10] == 1){
         if(GET_ACTOR_PTR(idx)->actorVars.varAC.integer > 0){
             GET_ACTOR_PTR(idx)->actorVars.varAC.integer--;
         }
@@ -1214,7 +1214,7 @@ void func_80030224(s16 idx){
     s32 sp34;
     s32 pad;
     
-    if(D_800F3940[1]->unk0[11] == 1){
+    if(D_800F3940[1]->unk0.unk0[11] == 1){
         if(GET_ACTOR_PTR(idx)->actorVars.varAC.integer < 0x31){
             GET_ACTOR_PTR(idx)->actorVars.varAC.integer++;
         }
@@ -1223,7 +1223,7 @@ void func_80030224(s16 idx){
         }
 
     }
-    else if(D_800F3940[1]->unk0[10] == 1){
+    else if(D_800F3940[1]->unk0.unk0[10] == 1){
         if(GET_ACTOR_PTR(idx)->actorVars.varAC.integer > 0){
             GET_ACTOR_PTR(idx)->actorVars.varAC.integer--;
         }
@@ -1266,22 +1266,22 @@ void func_80030354(s16 idx){
     
     ptr = &D_800F3940[1];
 
-    v0 = (*ptr)->unk0[15];
+    v0 = (*ptr)->unk0.unk0[15];
     
     if(v0 == 1 || v0 >= 0x15){
         scaleX += 0.01;
     }
     
-    v0 = (*ptr)->unk0[14];
+    v0 = (*ptr)->unk0.unk0[14];
     
     if(v0 == 1 || v0 >= 0x15){
         scaleX -= 0.01;
     }
 
-    v0 = (*ptr)->unk0[11];
+    v0 = (*ptr)->unk0.unk0[11];
     
     if(v0 == 1 || v0 >= 0x15){
-        if((*ptr)->unk0[13] != 0){
+        if((*ptr)->unk0.unk0[13] != 0){
             z += 0.1;
         }
         else{
@@ -1289,10 +1289,10 @@ void func_80030354(s16 idx){
         }
     }
     
-    v0 = (*ptr)->unk0[10];
+    v0 = (*ptr)->unk0.unk0[10];
     
     if(v0 == 1 || v0 >= 0x15){
-        if((*ptr)->unk0[13] != 0){
+        if((*ptr)->unk0.unk0[13] != 0){
             z -= 0.1;
         }
         else{
@@ -1300,13 +1300,13 @@ void func_80030354(s16 idx){
         }
     }
     
-    v0 = (*ptr)->unk0[9];
+    v0 = (*ptr)->unk0.unk0[9];
     
     if(v0 == 1 || v0 >= 0x15){
         x -= 0.1;
     }
     
-    v0 = (*ptr)->unk0[8];
+    v0 = (*ptr)->unk0.unk0[8];
     
     if(v0 == 1 || v0 >= 0x15){
         x += 0.1;
@@ -1337,49 +1337,49 @@ void func_800304F8(s16 idx){
     scaleX = actor->scale.x;
     ptr = &D_800F3940[1];
       
-    v0 = (*ptr)->unk0[10];
+    v0 = (*ptr)->unk0.unk0[10];
     
     if(v0 == 1 || v0 >= 0x15){
       scaleX += 0.01;
     }
     
-    v0 = (*ptr)->unk0[11];
+    v0 = (*ptr)->unk0.unk0[11];
     
     if(v0 == 1 || v0 >= 0x15){
       scaleX -= 0.01;
     }
     
-    v0 = (*ptr)->unk0[14];
+    v0 = (*ptr)->unk0.unk0[14];
     
     if(v0 == 1 || v0 >= 0x15){
       x += 0.05;
     }
     
-    v0 = (*ptr)->unk0[15];
+    v0 = (*ptr)->unk0.unk0[15];
     
     if(v0 == 1 || v0 >= 0x15){
       x -= 0.05;
     }
     
-    v0 = (*ptr)->unk0[1];
+    v0 = (*ptr)->unk0.unk0[1];
     
     if(v0 == 1 || v0 >= 0x15){
       y += 0.05;
     }
     
-    v0 = (*ptr)->unk0[2];
+    v0 = (*ptr)->unk0.unk0[2];
     
     if(v0 == 1 || v0 >= 0x15){
       y -= 0.05;
     }
     
-    v0 = (*ptr)->unk0[3];
+    v0 = (*ptr)->unk0.unk0[3];
     
     if(v0 == 1 || v0 >= 0x15){
       z += 0.05;
     }
     
-    v0 = (*ptr)->unk0[0];
+    v0 = (*ptr)->unk0.unk0[0];
     
     if(v0 == 1 || v0 >= 0x15){
       z -= 0.05;
@@ -1402,7 +1402,7 @@ void func_800306D8(s16 idx){
         
     ptr = &D_800F3940[1];
 
-    if((*ptr)->unk0[13] != 0 && actor->unk70 != -1){
+    if((*ptr)->unk0.unk0[13] != 0 && actor->unk70 != -1){
         v1 = TRUE;
         scale = D_801AF8D8[actor->unk48].unk4;
     }
@@ -1411,13 +1411,13 @@ void func_800306D8(s16 idx){
         scale = actor->scale.x;
     }
 
-    v0 = (*ptr)->unk0[14];
+    v0 = (*ptr)->unk0.unk0[14];
 
     if(v0 == 1 || v0 >= 0x15){
         scale += 0.01;
     }
 
-    v0 = (*ptr)->unk0[15];
+    v0 = (*ptr)->unk0.unk0[15];
 
     if(v0 == 1 || v0 >= 0x15){
         scale -= 0.01;
@@ -1439,13 +1439,13 @@ void func_800307EC(s16 idx){
     s16 a1 = actor->actorVars.varA4.integer;
     s16 a2 = actor->actorVars.varA8.integer;
     
-    a3 = (*ptr)->unk0[14];
+    a3 = (*ptr)->unk0.unk0[14];
 
     if(a3 == 1 || a3 >= 0x15){
         v1++;
     }
 
-    a3 = (*ptr)->unk0[15];
+    a3 = (*ptr)->unk0.unk0[15];
 
     if(a3 == 1 || a3 >= 0x15){
         v1--;
@@ -1458,13 +1458,13 @@ void func_800307EC(s16 idx){
         v1 = 0xFF;
     }
 
-    a3 = (*ptr)->unk0[1];
+    a3 = (*ptr)->unk0.unk0[1];
 
     if(a3 == 1 || a3 >= 0x15){
         a1++;
     }
 
-    a3 = (*ptr)->unk0[2];
+    a3 = (*ptr)->unk0.unk0[2];
 
     if(a3 == 1 || a3 >= 0x15){
         a1--;
@@ -1477,13 +1477,13 @@ void func_800307EC(s16 idx){
         a1 = 0xFF;
     }
 
-    a3 = (*ptr)->unk0[3];
+    a3 = (*ptr)->unk0.unk0[3];
 
     if(a3 == 1 || a3 >= 0x15){
         a2++;
     }
 
-    a3 = (*ptr)->unk0[0];
+    a3 = (*ptr)->unk0.unk0[0];
 
     if(a3 == 1 || a3 >= 0x15){
         a2--;
@@ -1517,13 +1517,13 @@ void func_8003099C(s16 idx){
     y = actor->rot.y;
     z = actor->rot.z;
     
-    v0 = (*ptr)->unk0[9];
+    v0 = (*ptr)->unk0.unk0[9];
 
     if(v0 == 1 || v0 >= 0x15){
         x -= 1.0;
     }
 
-    v0 = (*ptr)->unk0[8];
+    v0 = (*ptr)->unk0.unk0[8];
 
     if(v0 == 1 || v0 >= 0x15){
         x += 1.0;
@@ -1531,13 +1531,13 @@ void func_8003099C(s16 idx){
 
     x = func_8000ADE0(x);
 
-    v0 = (*ptr)->unk0[10];
+    v0 = (*ptr)->unk0.unk0[10];
 
     if(v0 == 1 || v0 >= 0x15){
         y -= 1.0;
     }
     
-    v0 = (*ptr)->unk0[11];
+    v0 = (*ptr)->unk0.unk0[11];
 
     if(v0 == 1 || v0 >= 0x15){
         y += 1.0;

@@ -480,7 +480,7 @@ void func_8007928C(Actor* actor){
                 cdata.unk42 = 0;
                 D_800E69C0.unkD = 0x60;
 
-                if(D_800F3940[cdata.unk41]->unk0[15] && D_800F3940[cdata.unk41]->unk0[14]){
+                if(D_800F3940[cdata.unk41]->unk0.unk0[15] && D_800F3940[cdata.unk41]->unk0.unk0[14]){
                     D_800F3950 = 6;
                 }
                 else{

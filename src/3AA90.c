@@ -241,7 +241,7 @@ void func_8003A400(s16 idx){
             }
             if(D_8015904C == 0 && ((D_80159046 == 0 && D_80159048 == 5) || (D_80159046 == 2 && D_80159048 == 3))){
                 D_8015904C = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 GET_ACTOR_PTR(idx)->status = 20;
                 D_8015904A = 0x4C;
@@ -268,7 +268,7 @@ void func_8003A400(s16 idx){
             D_80159048 = func_80012D40(D_80159046 + 0x1C, 0, 1);
 
             if(D_8015904A == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -342,12 +342,12 @@ void func_8003A8A0(s16 idx){
             id = 2;
             
             if(D_80159052 != 0 && ((D_8015904E == 0 && v1 == 5U) || (D_8015904E == id && v1 == id+1))){
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 GET_ACTOR_PTR(idx)->status = 14;
             }
             if(D_80159056 == 0 && ((D_8015904E == 0 && v1 == 4U) || (D_8015904E == id && v1 == 2U))){
                 D_80159056 = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_80159054 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -374,7 +374,7 @@ void func_8003A8A0(s16 idx){
             id = func_80024970(0x28, 0xB2);
 
             if(D_80159052 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -406,7 +406,7 @@ void func_8003A8A0(s16 idx){
             D_80159050 = id;
 
             if(D_80159054 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -472,7 +472,7 @@ void func_8003ADF8(s16 idx){
             
             if(D_8015905E == 0 && ((D_80159058 == 0 && id2 == 4U) || (D_80159058 == id && id2 == 2U))){
                 D_8015905E = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_8015905C = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -503,7 +503,7 @@ void func_8003ADF8(s16 idx){
             D_8015905A = id2;
 
             if(D_8015905C == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -589,7 +589,7 @@ void func_8003B23C(s16 idx){
             
             if(D_8015906A == 0 && ((D_80159064 == 0 && id2 == 7U) || (D_80159064 == id && id2 == id+1))){
                 D_8015906A = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_80159068 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -620,7 +620,7 @@ void func_8003B23C(s16 idx){
             D_80159066 = id;
 
             if(D_80159068 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -679,7 +679,7 @@ void func_8003B5E4(s16 idx){
 
             if(D_80159072 == 0 && ((D_8015906C == 0 && D_8015906E == 4) || (D_8015906C == 2U && D_8015906E == 2))){
                 D_80159072 = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0U);
                 D_80159070 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -706,7 +706,7 @@ void func_8003B5E4(s16 idx){
             D_8015906E = func_80012D40(D_8015906C + 0x30, 0, 1U);
             
             if(D_80159070 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -768,7 +768,7 @@ void func_8003B8AC(s16 idx){
                         
             if(D_8015907A == 0 && ((D_80159074 == 0 && id2 == 5U) || (D_80159074 == 2U && id2 == 2))){
                 D_8015907A = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_80159078 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -799,7 +799,7 @@ void func_8003B8AC(s16 idx){
             D_80159076 = id;
 
             if(D_80159078 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -868,7 +868,7 @@ void func_8003BC34(s16 idx){
             
             if(D_80159082 == 0 && ((D_8015907C == 0 && id2 == 4U) || (D_8015907C == id && id2 == 2U))){
                 D_80159082 = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_80159080 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -899,7 +899,7 @@ void func_8003BC34(s16 idx){
             D_8015907E = id;
 
             if(D_80159080 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -981,7 +981,7 @@ void func_8003BFAC(s16 idx){
             }
             if(D_8015908A == 0 && ((D_80159084 == 0 && id2 == 4U) || (D_80159084 == id && id2 == 2U))){
                 D_8015908A = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_80159088 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -1025,7 +1025,7 @@ void func_8003BFAC(s16 idx){
             D_80159086 = id;
 
             if(D_80159088 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -1111,7 +1111,7 @@ void func_8003C53C(s16 idx){
             
             if(D_8015909C == 0 && ((D_80159096 == 0 && D_80159098 == 11U) || (D_80159096 == 2U && D_80159098 == 10U))){
                 D_8015909C = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_8015909A = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -1139,7 +1139,7 @@ void func_8003C53C(s16 idx){
             D_80159098 = (s16)func_80012D40(D_80159096 + 0x44, 0, 1);
             
             if(D_8015909A == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -1201,7 +1201,7 @@ void func_8003C88C(s16 idx){
             
             if(D_801590A4 == 0 && ((D_8015909E == 0 && D_801590A0 == 7U) || (D_8015909E == 2U && D_801590A0 == 2))){
                 D_801590A4 = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_801590A2 = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -1228,7 +1228,7 @@ void func_8003C88C(s16 idx){
             D_801590A0 = (s16)func_80012D40(D_8015909E + 0x48, 0, 1);
 
             if(D_801590A2 == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{
@@ -1289,7 +1289,7 @@ void func_8003CBDC(s16 idx){
             
             if(D_801590AC == 0 && ((D_801590A6 == 0 && D_801590A8 == 11U) || (D_801590A6 == 2U && D_801590A8 == 2))){
                 D_801590AC = 1;
-                D_800F3940[cdata.unk41]->unkA4[15] = 1;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 1;
                 func_80008C6C(0x79, 0);
                 D_801590AA = 0x4C;
                 GET_ACTOR_PTR(idx)->status = 20;
@@ -1316,7 +1316,7 @@ void func_8003CBDC(s16 idx){
             D_801590A8 = (s16)func_80012D40(D_801590A6 + 0x4C, 0, 1);
 
             if(D_801590AA == 0){
-                D_800F3940[cdata.unk41]->unkA4[15] = 0;
+                D_800F3940[cdata.unk41]->unk0.unkA4[15] = 0;
                 GET_ACTOR_PTR(idx)->status = 11;
             }
             else{

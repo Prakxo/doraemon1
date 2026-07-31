@@ -213,7 +213,7 @@ void func_80028024(s16 idx){
     
     switch((u32)actor->status){
         case 0:
-            if(D_800F3940[cdata.unk41]->unk0[actor->actorVars.varA0.integer] == 1){
+            if(D_800F3940[cdata.unk41]->unk0.unk0[actor->actorVars.varA0.integer] == 1){
                 if(actor->actorVars.varA8.integer & 1){
                     func_80007648(actor->actorVars.varAC.integer);
                 }
@@ -264,14 +264,14 @@ void func_80028024(s16 idx){
             }
             break;
         case 20:
-            (s32)D_800F3940[cdata.unk41]->unk0[15] = 10;
-            D_800F3940[cdata.unk41]->unkA4[14] = 0;
-            D_800F3940[cdata.unk41]->unkA4[5] = 0;
-            D_800F3940[cdata.unk41]->unkA4[4] = 0;
-            D_800F3940[cdata.unk41]->unkA4[3] = 0;
-            D_800F3940[cdata.unk41]->unkA4[2] = 0;
-            D_800F3940[cdata.unk41]->unkA4[1] = 0;
-            D_800F3940[cdata.unk41]->unkA4[0] = 0;  
+            (s32)D_800F3940[cdata.unk41]->unk0.unk0[15] = 10;
+            D_800F3940[cdata.unk41]->unk0.unkA4[14] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[5] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[4] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[3] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[2] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[1] = 0;
+            D_800F3940[cdata.unk41]->unk0.unkA4[0] = 0;  
             
             D_800E6B20.unk0 = 0;
             

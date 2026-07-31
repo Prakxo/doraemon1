@@ -6,7 +6,7 @@
 
 typedef struct D_800E6468_struct{
     u8 unk0[0x48];
-    D_800F3940_struct unk48;
+    D_800F3940_struct_unk0 unk48;
     u8 unkFC;
     s16 unkFE;
     s16 unk100;
