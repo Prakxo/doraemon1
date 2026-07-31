@@ -251,7 +251,7 @@ void func_8002D7AC(s16 idx){
                 }
 
                 if(!(sc.sc.unk284 % 8U)){
-                    if(cdata.unk43 % 2U){
+                    if(cdata.unk43 & GAME_SETTING(ZZ_GAME0_SETTING_DIFFICULTY)){
                         random(0);
                     }
 
@@ -302,7 +302,7 @@ void func_8002D998(s16 idx){
 
                 if(cdata.nextstg != ZZ_GAME0_LEVEL_3_2){
                     if(!(sc.sc.unk284 % 8U)){
-                        if(cdata.unk43 % 2U){
+                        if(cdata.unk43 & GAME_SETTING(ZZ_GAME0_SETTING_DIFFICULTY)){
                              t1 = D_802BD240[random(0) % 2U];
                         }
                         else{

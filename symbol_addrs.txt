@@ -1216,6 +1216,7 @@ idle_stack = 0x800E36A0;
 main_thread = 0x800DD6A0;
 main_stack = 0x800DD860;
 controller_thread = 0x800DE860;
+sysGameData = 0x800EEFC8; // size:0x50
 D_800F3950 = 0x800F3950;
 curSegmentSize = 0x800F3A30;
 cdata = 0x800F38A0; // size:0x80

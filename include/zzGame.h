@@ -3,6 +3,8 @@
 
 #include "ultra64.h"
 
+#define GAME_SETTING(x) (1 << (x))
+
 typedef enum Game0Level{
     ZZ_GAME0_LEVEL_DEVIL,
     ZZ_GAME0_LEVEL_1_1, // Grass
@@ -22,6 +24,13 @@ typedef enum Game0Level{
     ZZ_GAME0_LEVEL_INTRO_TOKYO,
     ZZ_GAME0_LEVEL_DEBUG,
 }ZZGame0Level;
+
+typedef enum Game0Settings{
+    ZZ_GAME0_SETTING_DIFFICULTY,
+    ZZ_GAME0_SETTING_AUDIO_MONO,
+    ZZ_GAME0_SETTING_DIALOG_SPEED,
+    ZZ_GAME0_SETTING_BRIGHTNESS,
+}Game0Settings;
 
 void func_8000E320(void);
 void func_8000DF50(void);
