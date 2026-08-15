@@ -1,9 +1,10 @@
 #include "controller.h"
 #include "scheduler.h"
 
+#include "common.h"
+
 extern OSScClient D_800E69B8;
 extern s16 D_800EDDB0;
-extern volatile u8 D_800EEFB8;
 
 void func_800016D0(D_800E6270_struct* arg0){
     s32 v0;
@@ -163,10 +164,10 @@ s32 func_80001C38(OSMesgQueue* queue, OSMesg* msg, s32 count, void* arg3, D_800E
     osContInit(queue, &pattern, arg4->status);
 
     if(osEepromProbe(queue) != 0){
-        D_800EEFB8 = TRUE;
+        D_800EEFB8.unk0 = TRUE;
     }
     else{
-        D_800EEFB8 = FALSE;
+        D_800EEFB8.unk0 = FALSE;
     }
     
     arg5[4].unkFC = 1;

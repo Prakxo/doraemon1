@@ -119,7 +119,7 @@ extern f32 D_800F05DC;
 
 typedef struct D_800E69C0_struct {
     volatile u32 unk0;
-    u8 unk4[0x4];
+    volatile s32 unk4;
     volatile u16 unk8;
     volatile u16 unkA;
     volatile u8 unkC;

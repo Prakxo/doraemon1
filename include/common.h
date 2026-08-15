@@ -4,6 +4,7 @@
 #include "ultra64.h"
 #include "global.h"
 #include "actor.h"
+#include "scheduler.h"
 
 typedef struct D_801591C0_struct_unk4 {
     u8 unk0[0x4];
@@ -461,5 +462,40 @@ typedef struct D_80336980_struct{
     s16 unk2;
 } D_80336980_struct;
 extern D_80336980_struct** D_80336980[1];
+
+typedef void (*D_800F3958_fptr)(struct D_800F3958_struct*);
+
+typedef struct D_800F3958_struct{
+    u8 unk0;
+    u8 unk1[0x1];
+    u8 unk2;
+    u8 unk3;
+    u8 unk4;
+    u8 unk5;
+    u8 unk6;
+    u8 unk7;
+    u8 unk8[0x8];
+    OSScClient client;
+    OSMesgQueue mq;
+    u8 unk30[0x50 - 0x30];
+    D_800F3958_fptr unk50;
+    D_800F3958_fptr unk54;
+    D_800F3958_fptr unk58;
+    D_800F3958_fptr unk5C;
+    D_800F3958_fptr unk60;
+    D_800F3958_fptr unk64;
+    D_800F3958_fptr unk68;
+}D_800F3958_struct;
+
+extern D_800F3958_struct D_800F3958;
+
+typedef struct D_800EEFB8_struct{
+    volatile u8 unk0;
+    volatile u8 unk1;
+    volatile s32 unk4;
+    volatile s32 unk8;
+}D_800EEFB8_struct;
+
+extern D_800EEFB8_struct D_800EEFB8;
 
 #endif
