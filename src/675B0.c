@@ -123,7 +123,7 @@ void func_80066BC8(s16 idx){
             if(id != -1){
                 func_80022F20(id, func_800669B0);
             }
-            if(!(cdata.unk46[cdata.nextstg] & 0x4000)){
+            if(!(cdata.events[cdata.nextstg] & 0x4000)){
                 id = func_80023644(8, 0x62, -25.0f, -149.0f, -770.0f, 0.0f, 90.0f, 0.0f);
 
                 if(id != -1){

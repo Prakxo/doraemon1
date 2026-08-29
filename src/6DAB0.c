@@ -83,8 +83,8 @@ void func_8006CEB8(s16 idx) {
         case 100:
             D_800F39AC = 0;
             cdata.unk44 |= 1;
-            D_800E69C0.unkD &= ~1;
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.syscalls &= ~1;
+            D_800E69C0.cfb_render |= 1;
 
             D_801590EC = func_80023644(8, 0x1E2, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
 
@@ -143,7 +143,7 @@ void func_8006CEB8(s16 idx) {
             D_800F3920.unk0 = 6;
             D_800F3920.unk2 = 0xA;
 
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.cfb_render |= 1;
 
             func_800073C0(0x2A, 0);
 
@@ -190,7 +190,7 @@ void func_8006CEB8(s16 idx) {
             }
             break;
         case 250:
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.cfb_render |= 1;
 
             if (func_80012D40(0xF, actor->actorVars.varA8.integer, 0xF0) == 0) {
                 actor->status = 200;

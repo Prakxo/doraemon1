@@ -68,7 +68,7 @@ segments:
       - [0x10C0, c, idle]
       - [0x1400, c, pistart]
 
-      - [0x1590, asm, scheduler]
+      - [0x1590, c, scheduler]
       - [0x22D0, c, controller]
       - [0x2AF0, c, 2AF0]
       - [0x3070, asm, save_file]
@@ -407,6 +407,10 @@ segments:
  
       - [0xA0760, data, rspboot]
       - [0xA0830, data]
+
+      - [0xA8EE0, .data, scheduler]
+
+      - [0xA8EF0, data]
       
       - [0xAC8E0, .data, audiomgr]
       - [0xAC8F0, .data, 7FC0]
@@ -466,7 +470,7 @@ segments:
 
       - [0xC08B0, rodata]
 
-      - [0xC08F0, rodata]
+      - [0xC08F0, .rodata, scheduler]
 
       - [0xC09C0, rodata]
 

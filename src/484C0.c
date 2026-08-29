@@ -45,7 +45,7 @@ void func_800478C0(s16 idx){
                     actor->status = 450;
                     break;
                 case 6:
-                    if(cdata.unk46[4] % 2U == id){ 
+                    if(cdata.events[4] % 2U == id){ 
                         actor->actorVars.varA0.integer = 7;
                     } 
                     

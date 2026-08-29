@@ -4,6 +4,7 @@
 #include "7310.h"
 #include "save_file.h"
 #include "common.h"
+#include "scheduler.h"
 
 extern OSMesgQueue D_800E3FA8;
 extern s16 D_800EDDB0;
@@ -22,7 +23,7 @@ void func_80001EF0(D_800F3958_struct* arg0){
     
     s4 = 0;
     arg0->unk50(arg0);
-    osScAddClient(&sc.sc, &var_s0->client, &var_s0->mq);
+    osScAddClient(&sc, &var_s0->client, &var_s0->mq);
 
     while(TRUE){
         var_s0->unk68(var_s0);
@@ -60,7 +61,7 @@ void func_80001EF0(D_800F3958_struct* arg0){
                     D_800E69C0.unk4 = var_s0->unk7;
 
                     if(D_800E69C0.unk0 != 0){
-                        D_800E69C0.unkD &= ~0x10;
+                        D_800E69C0.syscalls &= ~0x10;
                         func_80007648(0);
                         func_800090B0(0);
 
@@ -71,7 +72,7 @@ void func_80001EF0(D_800F3958_struct* arg0){
                             break;
                         }
                     }
-                    if(D_800E69C0.unkD & 1){
+                    if(D_800E69C0.syscalls & 1){
                         if(var_s0->unk54 != NULL){
                             if(D_800E69C0.unk0 == 0){
                                 var_s0->unk54(var_s0);
@@ -81,7 +82,7 @@ void func_80001EF0(D_800F3958_struct* arg0){
                             }
                         }
                     }
-                    if(var_s0->unk7 == 1 && D_800E69C0.unkD & 0x10){
+                    if(var_s0->unk7 == 1 && D_800E69C0.syscalls & 0x10){
                         if(var_s0->unk58 != NULL){
                             var_s0->unk58(var_s0);
                         }
@@ -90,10 +91,10 @@ void func_80001EF0(D_800F3958_struct* arg0){
                     var_s0->unk7 = 2;
                     D_800E69C0.unk4 = var_s0->unk7;
 
-                    if(D_800E69C0.unkD & 0x20 && var_s0->unk5 == 1 && var_s0->unk2 < 2){
+                    if(D_800E69C0.syscalls & 0x20 && var_s0->unk5 == 1 && var_s0->unk2 < 2){
                         var_s0->unk5C(var_s0);
                     }
-                    if(D_800E69C0.unkD & 0x40 && var_s0->unk5 == 1 && var_s0->unk2 < 2){
+                    if(D_800E69C0.syscalls & 0x40 && var_s0->unk5 == 1 && var_s0->unk2 < 2){
                         D_800E69C0.unk1D[var_s0->unk3] = 1;
                         var_s0->unk60(var_s0);
                         var_s0->unk7 = 0;

@@ -24,7 +24,7 @@ void func_800016D0(D_800E6270_struct* arg0){
     sp78 = arg0;
     sp7F = TRUE;
 
-    osScAddClient(&sc.sc, &D_800E69B8, sp78->msgQueue);
+    osScAddClient(&sc, &D_800E69B8, sp78->msgQueue);
     
     while(sp7F){
         osRecvMesg(sp78->msgQueue, &m, OS_MESG_BLOCK);

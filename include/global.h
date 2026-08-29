@@ -43,7 +43,7 @@ typedef struct cdata_struct {
     u8 unk42;
     u8 unk43;
     u16 unk44;
-    u16 unk46[18];
+    u16 events[18];
     u8 unk6A;
     u8 unk6B;
     u8 unk6C;
@@ -123,8 +123,8 @@ typedef struct D_800E69C0_struct {
     volatile u16 unk8;
     volatile u16 unkA;
     volatile u8 unkC;
-    volatile u8 unkD;
-    volatile u8 unkE;
+    volatile u8 syscalls;
+    volatile u8 cfb_render;
     volatile u8 unkF;
     volatile s32 unk10;
     volatile s32 unk14;

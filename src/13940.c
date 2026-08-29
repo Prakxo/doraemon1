@@ -73,11 +73,11 @@ s32 func_80012D40(s32 arg0, s32 arg1, u8 arg2) {
         D_800F5F82 = 0;
         D_800F5F96[0] = 0;
         D_800F5FA4[0] = 0;
-        D_800E69C0.unkD &= ~0x1;
-        D_800F5F96[1] = D_800E69C0.unkE;
+        D_800E69C0.syscalls &= ~0x1;
+        D_800F5F96[1] = D_800E69C0.cfb_render;
         (D_800F5F90.unk1 = 0);
 
-        D_800E69C0.unkE |= 1;
+        D_800E69C0.cfb_render |= 1;
         D_800F3920.unk1 |= 1; 
         D_800F5F90.unk3 = 0;
 
@@ -168,8 +168,8 @@ s32 func_80012D40(s32 arg0, s32 arg1, u8 arg2) {
                 D_800F3940[cdata.unk41]->unk0.unkA4[0] = 0;
                 D_800E6B20.unk6587 = 0;
 
-                D_800E69C0.unkE = D_800F5F96[1];
-                D_800E69C0.unkD |= 1;
+                D_800E69C0.cfb_render = D_800F5F96[1];
+                D_800E69C0.syscalls |= 1;
                 GET_ACTOR(D_80159178->unk48[cdata.unk41].unk0).flags &= ~0x4000;
                 D_800AC090 = 0;
                 D_800F3920.unk1 &= ~0x1;
@@ -212,8 +212,8 @@ s32 func_80012D40(s32 arg0, s32 arg1, u8 arg2) {
                             func_80015258(&texRec, D_800F5FA0);
 
                             D_800E6B20.unk6587 = 0;
-                            D_800E69C0.unkE = D_800F5F96[1];
-                            D_800E69C0.unkD |= 1;
+                            D_800E69C0.cfb_render = D_800F5F96[1];
+                            D_800E69C0.syscalls |= 1;
                             D_800F3920.unk1 &= ~0x1;
                             D_800E6B20.unk20 = 0x4B;
                             D_800E6B20.unk22 = 0xB7;
@@ -248,9 +248,9 @@ s32 func_80012D40(s32 arg0, s32 arg1, u8 arg2) {
                 D_800AC090 = 0;
                 func_80015258(&texRec, D_800F5F9C);
                 func_80015258(&texRec, D_800F5FA0);
-                D_800E69C0.unkD |= 1;
+                D_800E69C0.syscalls |= 1;
                 D_800E6B20.unk6587 = 0;
-                D_800E69C0.unkE = D_800F5F96[1];
+                D_800E69C0.cfb_render = D_800F5F96[1];
                 D_800E6B20.unk20 = 0x4B;
                 D_800E6B20.unk22 = 0xB7;
                 GET_ACTOR(D_80159178->unk48[cdata.unk41].unk0).flags &= ~0x4000;

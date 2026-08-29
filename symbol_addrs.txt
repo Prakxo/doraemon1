@@ -282,6 +282,7 @@ viMgrMain = 0x8008A9F8;
 
 osViSetMode = 0x8008ABD0;
 osViBlack = 0x8008AC40;
+osViModeTable = 0x800BEA20;
 
 //
 

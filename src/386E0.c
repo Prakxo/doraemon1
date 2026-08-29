@@ -266,7 +266,7 @@ void func_800383E4(s16 idx){
             
             if(id != -1){
                 actor->actorVars.varA0.integer = id;
-                D_800E69C0.unkD &= ~1;
+                D_800E69C0.syscalls &= ~1;
                 D_800E6B20_2022_sets(0x20, 0xB0);
                 
                 func_800073C0(0x25, 1);
@@ -291,7 +291,7 @@ void func_800383E4(s16 idx){
 
                 func_80022F20(idx, func_80039000);
                 actor->flags |= 0x1000;
-                D_800E69C0.unkD |= 1;
+                D_800E69C0.syscalls |= 1;
             }
             break;
     }
@@ -348,7 +348,7 @@ void func_800385C0(s16 idx){
             break;
         
         case 10:
-            D_800E69C0.unkD &= ~1;
+            D_800E69C0.syscalls &= ~1;
             D_800E6B20_2022_sets(0x20, 0xB0);
 
             func_80076F2C(actor->unk48);
@@ -408,7 +408,7 @@ void func_800385C0(s16 idx){
                     GET_ACTOR_PTR(actor->actorVars.varB4.integer)->unk80 = func_80039000;
                 }
                 
-                D_800E69C0.unkD |= 1;
+                D_800E69C0.syscalls |= 1;
             }
             break;
     }

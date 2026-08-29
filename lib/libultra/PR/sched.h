@@ -60,6 +60,7 @@ typedef struct OSScTask_s {
     OSTime              startTime;      /* remain at the end!!, or    */
     OSTime              totalTime;      /* possible conflict if       */
 #endif                                  /* FINALROM library used with */
+    volatile u32 unk58; //mod
 } OSScTask;                             /* non FINALROM code          */
 
 /*
@@ -105,12 +106,6 @@ typedef struct {
     s32         doAudio;
     volatile s32 unk284; //Mod
 } OSSched;
-
-void            osCreateScheduler(OSSched *s, void *stack, OSPri priority,
-                                  u8 mode, u8 numFields);
-void            osScAddClient(OSSched *s, OSScClient *c, OSMesgQueue *msgQ);
-void            osScRemoveClient(OSSched *s, OSScClient *c);
-OSMesgQueue     *osScGetCmdQ(OSSched *s);
 
 #endif
 

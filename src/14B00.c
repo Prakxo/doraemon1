@@ -1,3 +1,4 @@
+#include "14B00.h"
 #include "global.h"
 
 void func_80013F00(D_800F5FB0_struct* arg0, void* arg1, D_801BAA80_struct* arg2){

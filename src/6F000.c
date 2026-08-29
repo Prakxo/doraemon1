@@ -54,7 +54,7 @@ void func_8006E400(s16 idx) {
     (void)"CORONA MNO %d\n";
     (void)"KING MNO %d\n";
 
-    if (cdata.unk46[0] & 0x4000 || D_800E69C0.unkA == 0xC8) {
+    if (cdata.events[0] & 0x4000 || D_800E69C0.unkA == 0xC8) {
         D_800E69C0.unkA = 0xC8;
         func_80022F20(idx, func_80071A10);
 
@@ -99,8 +99,8 @@ void func_8006E400(s16 idx) {
             D_800F39AC = 0;
 
             cdata.unk44 |= 1;
-            D_800E69C0.unkD &= ~1;
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.syscalls &= ~1;
+            D_800E69C0.cfb_render |= 1;
 
             D_801590F0 = func_80023644(8, 0x1E2, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
             func_80022F20(D_801590F0, func_80028024);
@@ -169,7 +169,7 @@ void func_8006E400(s16 idx) {
             D_800F3920.unk0 = 6;
             D_800F3920.unk2 = 0xA;
 
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.cfb_render |= 1;
 
             func_800073C0(0x35, 0);
 
@@ -219,7 +219,7 @@ void func_8006E400(s16 idx) {
             }
             break;
         case 250:
-            D_800E69C0.unkE |= 1;
+            D_800E69C0.cfb_render |= 1;
 
             if (func_80012D40(0x12, actor->actorVars.varB0.integer, 0xF0) == 0) {
                 actor->status = 200;

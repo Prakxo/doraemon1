@@ -43,7 +43,7 @@ void func_800655D0(s16 idx){
                      GET_ACTOR_PTR(id)->actorVars.varA0.integer = 4;
                 }
             }
-            else if(cdata.unk46[cdata.nextstg] & 0x8000){
+            else if(cdata.events[cdata.nextstg] & 0x8000){
                 id = func_80023644(8, 0x62, -1476.0f, 92.0f, 1353.0f, 0.0f, 0.0f, 0.0f);
 
                 if(id != -1){

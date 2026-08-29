@@ -56,10 +56,10 @@ void func_8000C71C(Gfx** gfxPtr, void* imgAddr, u16 colour){
     gDPSetColorImage(gfxPtr[0]++, G_IM_FMT_RGBA, G_IM_SIZ_16b, 320, osVirtualToPhysical(imgAddr));
 
 
-    if(D_800E69C0.unkE & 1){
+    if(D_800E69C0.cfb_render & 1){
         gDPSetFillColor(gfxPtr[0]++, (GPACK_RGBA5551(0, 0, 0, 1) << 16) | GPACK_RGBA5551(0, 0, 0, 1));
         gDPFillRectangle(gfxPtr[0]++, 0, 0, 319, 239);
-        if(D_800E69C0.unkE & 2){
+        if(D_800E69C0.cfb_render & 2){
             gDPSetFillColor(gfxPtr[0]++, colour << 16 | colour);
             gDPFillRectangle(gfxPtr[0]++, 16, 12, 302, 226);
         }

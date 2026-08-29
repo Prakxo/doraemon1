@@ -45,8 +45,8 @@ void func_80054670(s16 idx){
 
     switch(GET_ACTOR_PTR(idx)->status){
         case 0:
-            actor->actorVars.varD0.integer = cdata.unk46[cdata.nextstg] >> 0xE;
-            cdata.unk46[cdata.nextstg] |= 0x8000;
+            actor->actorVars.varD0.integer = cdata.events[cdata.nextstg] >> 0xE;
+            cdata.events[cdata.nextstg] |= 0x8000;
 
             actor->unk4E = 2;
             actor->unk6C = 0xB;
@@ -569,8 +569,8 @@ void func_80054670(s16 idx){
             }
             break;
         case 900:
-            cdata.unk46[cdata.nextstg] |= 0x4000;
-            D_800E69C0.unkD &= ~0x1;
+            cdata.events[cdata.nextstg] |= 0x4000;
+            D_800E69C0.syscalls &= ~0x1;
             func_80008C6C(0x44, 3);
             func_80023644(6, 0x161, actor->pos.x, actor->pos.y + 30.0f, actor->pos.z, 0.0f, 0.0f, 0.0f);
             func_80008C6C(0xD, 2);
@@ -607,7 +607,7 @@ void func_80054670(s16 idx){
             break;
         case 903:
             if(!func_80012D40(9, (actor->actorVars.varD0.integer % 2U) + 8, 1)){
-                D_800E69C0.unkD &= ~0x1;
+                D_800E69C0.syscalls &= ~0x1;
                 D_800E6B20_2022_sets(0x4B, 0xB7);\
                 D_800E6B20.unk19 = cdata.unk6A;\
                 D_800E6B20.unk16 = 1;\
@@ -695,7 +695,7 @@ void func_80054670(s16 idx){
                 }
 
                 GET_ACTOR_PTR(D_80159178->unk48[cdata.unk41].unk0)->flags &= ~0x4000;
-                D_800E69C0.unkD |= 1;
+                D_800E69C0.syscalls |= 1;
                 return;
             }
             else{

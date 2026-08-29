@@ -20,7 +20,6 @@ typedef struct AudioInfo_s {
     short* data;        /* Output data pointer */
     short frameSamples; /* # of samples synthesized in this frame */
     OSScTask task;      /* scheduler structure */
-    u8 pad[0x8];
     AudioMsg msg; /* completion message */
 } AudioInfo;
 
@@ -134,7 +133,7 @@ void __amMain(void* arg) {
     AudioInfo* lastInfo = 0;
     OSScClient client;
 
-    osScAddClient(&sc.sc, &client, &__am.audioFrameMsgQ);
+    osScAddClient(&sc, &client, &__am.audioFrameMsgQ);
 
     while (!done) {
         (void)osRecvMesg(&__am.audioFrameMsgQ, (OSMesg*)&msg, OS_MESG_BLOCK);

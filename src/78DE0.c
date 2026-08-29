@@ -68,7 +68,7 @@ void func_800781E0(Actor* actor){
                 cdata.unk42 = 2;
 
                 D_800E69C0.unk0 = 1;
-                D_800E69C0.unkD = 0x60;
+                D_800E69C0.syscalls = 0x60;
                 D_800E69C0.unk14 = 0x14;
 
                 D_800E69C0.unk3C.uchar[0] = 1;
@@ -105,7 +105,7 @@ void func_8007835C(Actor* actor){
                 cdata.unk42 = 1;
                 
                 D_800E69C0.unk0 = 1;
-                D_800E69C0.unkD = 0x60;
+                D_800E69C0.syscalls = 0x60;
 
                 
 
@@ -113,7 +113,7 @@ void func_8007835C(Actor* actor){
             }
             else{
                 D_800E69C0.unk0 = 1;
-                D_800E69C0.unkD = 0x60;
+                D_800E69C0.syscalls = 0x60;
                 D_800E69C0.unk14 = 0x1E;
                 D_800E69C0.unkA = 0x3E7;
                 
@@ -478,7 +478,7 @@ void func_8007928C(Actor* actor){
                 actor->actorVars.varB8.uchars[2] = 10;
                 D_800E69C0.unk0 = 1;
                 cdata.unk42 = 0;
-                D_800E69C0.unkD = 0x60;
+                D_800E69C0.syscalls = 0x60;
 
                 if(D_800F3940[cdata.unk41]->unk0.unk0[15] && D_800F3940[cdata.unk41]->unk0.unk0[14]){
                     D_800F3950 = 6;
