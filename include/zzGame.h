@@ -22,7 +22,7 @@ typedef enum Game0Level{
     ZZ_GAME0_LEVEL_OVERWORLD_GROUND,
     ZZ_GAME0_LEVEL_OVERWORLD_AIR,
     ZZ_GAME0_LEVEL_INTRO_TOKYO,
-    ZZ_GAME0_LEVEL_DEBUG,
+    ZZ_GAME0_LEVEL_INTRO_DEBUG,
 }ZZGame0Level;
 
 typedef enum Game0Settings{
@@ -31,6 +31,16 @@ typedef enum Game0Settings{
     ZZ_GAME0_SETTING_DIALOG_SPEED,
     ZZ_GAME0_SETTING_BRIGHTNESS,
 }Game0Settings;
+
+typedef enum GameCharacter{
+    ZZ_CHARACTER_NONE, //NEW FILE
+    ZZ_CHARACTER_DORAEMON,
+    ZZ_CHARACTER_NOBITA,
+    ZZ_CHARACTER_SHIZUKA,
+    ZZ_CHARACTER_GIANT,
+    ZZ_CHARACTER_SUNEO,
+    ZZ_CHARACTER_CORONA,
+}ZZGameCharacter;
 
 void func_8000E320(void);
 void func_8000DF50(void);

@@ -198,7 +198,7 @@ segments:
       
       - [0x823D0, c]
       
-      - [0x82840, asm, zzFileSelect]
+      - [0x82840, c, zzFileSelect]
       - [0x89680, asm]
       - [0x89D30, asm, zzBGScreen]
       
@@ -462,6 +462,10 @@ segments:
       
       - [0xB74A0, data] 
 
+      - [0xB7520, .data, zzFileSelect]
+
+      - [0xB7580, data]
+
       - [0xBF5C0, .data, libultra/os/initialize]
 
       - [0xBF5E0, data]
@@ -608,7 +612,7 @@ segments:
 
       - [0xC7060, .rodata, 823D0]
       
-      - [0xC7080, rodata]
+      - [0xC7080, .rodata, zzFileSelect]
 
       - [0xC73A0, rodata]
 

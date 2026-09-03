@@ -498,4 +498,21 @@ typedef struct D_800EEFB8_struct{
 
 extern D_800EEFB8_struct D_800EEFB8;
 
+typedef struct D_801BB3F0_struct_unk14{
+    u8 unk0[0x14];
+    s32 unk14;
+}D_801BB3F0_struct_unk14;
+
+typedef struct D_801BB3F0_struct{
+    s32 unk0;
+    u8 unk4[0x10];
+    D_801BB3F0_struct_unk14* unk14;
+    u8 unk18[0x20];
+    D_801BB3F0_struct_unk14* unk38;
+    u8 unk3C[0x20];
+    s32 unk5C;
+}D_801BB3F0_struct;
+
+extern D_801BB3F0_struct D_801BB3F0;
+
 #endif

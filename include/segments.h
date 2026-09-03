@@ -32,12 +32,17 @@ extern u8 D_3A0350[0x12FA0];
 extern u8 D_3B32F0[0xD260];
 extern u8 D_3C0550[0xCF60];
 
+extern u8 D_3FB080[0x7E0];
+extern u8 D_3FB860[0x200];
+
 extern u8 _bankSegmentRom[0x9970];
 extern u8 _tableSegmentRom[0x1A6990];
 extern u8 _bank2SegmentRom[0xBD90];
 extern u8 _table2SegmentRom[];
 
 extern u8 D_8020C820[];
+extern u8 D_801DB800[];
+extern u8 D_801DD780[];
 extern u8 D_801EB320[];
 extern u8 D_801F5320[];
 extern u8 D_801FCB20[];

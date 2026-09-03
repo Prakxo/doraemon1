@@ -131,7 +131,7 @@ void func_800022DC(SysGameData* gameData){
     s32 i;
     s32 j;
     s32 k;
-    u8* v0 = gameData->unk0;
+    u8* v0 = gameData->unk0.unk0;
     u8 buf[EEPROM_BLOCK_SIZE*64];
     s32 v1;
     s32 sp230[1];
@@ -141,7 +141,7 @@ void func_800022DC(SysGameData* gameData){
 
     sp230[0] = 0;
     
-    for(i = 0; i < gameData->count; i++){
+    for(i = 0; i < gameData->unk0.count; i++){
         v1 = 0;
         
         for(j = 0; j < 8; j++, v0++){
@@ -152,14 +152,14 @@ void func_800022DC(SysGameData* gameData){
         sp230[0] += v1;
     }
 
-    if(osEepromLongRead(&D_800EDDD0, gameData->addr, buf, gameData->count*EEPROM_BLOCK_SIZE) != 0){
+    if(osEepromLongRead(&D_800EDDD0, gameData->unk0.addr, buf, gameData->unk0.count*EEPROM_BLOCK_SIZE) != 0){
         D_800EEFB8.unk4 = -2;
     }
     else{
         sp12C[0] = 0;
         v0 = buf;
         
-        for(i = 0; i < gameData->count; i++){
+        for(i = 0; i < gameData->unk0.count; i++){
             v1 = 0;
             
             for(j = 0; j < 8; j++, v0++){
@@ -170,7 +170,7 @@ void func_800022DC(SysGameData* gameData){
             sp12C[0] += v1;
         }       
 
-        for(i = 0; i < gameData->count; i++){
+        for(i = 0; i < gameData->unk0.count; i++){
             if(sp2C[i] != sp130[i]){
                 D_800EEFB8.unk4 = -2;
                 return;

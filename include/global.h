@@ -41,7 +41,7 @@ typedef struct cdata_struct {
     s8 unk40;
     u8 unk41;
     u8 unk42;
-    u8 unk43;
+    u8 settings;
     u16 unk44;
     u16 events[18];
     u8 unk6A;
