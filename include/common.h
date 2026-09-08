@@ -485,6 +485,10 @@ typedef struct D_800F3958_struct{
     D_800F3958_fptr unk60;
     D_800F3958_fptr unk64;
     D_800F3958_fptr unk68;
+    s32 unk6C;
+    s32 unk70;
+    s32 unk74;
+    s32 unk78;
 }D_800F3958_struct;
 
 extern D_800F3958_struct D_800F3958;
@@ -514,5 +518,35 @@ typedef struct D_801BB3F0_struct{
 }D_801BB3F0_struct;
 
 extern D_801BB3F0_struct D_801BB3F0;
+
+typedef struct _8000DAD0_arg0_struct{
+    u8 unk0;
+    u8 unk1;
+    u8 unk2;
+    u8 unk3;
+    u8 unk4;
+    u8 unk5;
+    u8 unk6;
+    u8 unk7;
+}_8000DAD0_arg0_struct;
+
+typedef struct D_800CA230_struct{
+    u32 unk0;
+    u32 unk4;
+    u32 unk8;
+    u32 unkC;
+}D_800CA230_struct;
+
+extern D_800CA230_struct D_800CA230;
+
+typedef struct D_800F0530_struct{
+    f32 unk0;
+    f32 unk4;
+    f32 unk8;
+    f32 unkC;
+    f32 unk10;
+}D_800F0530_struct;
+
+extern D_800F0530_struct D_800F0530;
 
 #endif

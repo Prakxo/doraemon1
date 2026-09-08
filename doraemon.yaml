@@ -100,7 +100,7 @@ segments:
       - [0xE020, c]
       - [0xE5B0, c]
  
-      - [0xE6D0, asm, zzGame]
+      - [0xE6D0, c, zzGame]
 
       - [0xFA60, asm]
 
@@ -496,7 +496,7 @@ segments:
 
       - [0xC1F00, .rodata, E5B0]
 
-      - [0xC1FE0, rodata]
+      - [0xC1FE0, .rodata, zzGame]
 
       - [0xC2060, rodata]
 

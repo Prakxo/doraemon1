@@ -3,7 +3,9 @@
 
 #include "ultra64.h"
 
+#include "common.h"
+
 void func_800817D0(s32 arg0);
-void func_8008191C(s32 arg0);
+void func_8008191C(D_800F3958_fptr arg0);
 
 #endif

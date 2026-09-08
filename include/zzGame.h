@@ -5,6 +5,8 @@
 
 #define GAME_SETTING(x) (1 << (x))
 
+struct _8000DAD0_arg0_struct;
+
 typedef enum Game0Level{
     ZZ_GAME0_LEVEL_DEVIL,
     ZZ_GAME0_LEVEL_1_1, // Grass
@@ -42,11 +44,11 @@ typedef enum GameCharacter{
     ZZ_CHARACTER_CORONA,
 }ZZGameCharacter;
 
-void func_8000E320(void);
-void func_8000DF50(void);
-void func_8000DAD0(void);
-void func_8000E72C(void);
-void func_8000E9E8(void);
-void func_8000ED00(void);
+void func_8000E320(struct _8000DAD0_arg0_struct* arg0);
+void func_8000DF50(struct _8000DAD0_arg0_struct* arg0);
+void func_8000DAD0(struct _8000DAD0_arg0_struct* arg0);
+void func_8000E72C(struct _8000DAD0_arg0_struct* arg0);
+void func_8000E9E8(struct _8000DAD0_arg0_struct* arg0);
+void func_8000ED00(struct _8000DAD0_arg0_struct* arg0);
 
 #endif

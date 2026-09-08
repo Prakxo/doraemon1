@@ -45,7 +45,7 @@ void func_800817D0(s32 arg0){
     } 
 } 
 
-void func_8008191C(s32 arg0){
+void func_8008191C(D_800F3958_fptr arg0){
 
     switch(D_800E69C0.unk3C.uchar[0]){
         case 0:

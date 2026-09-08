@@ -1,8 +1,10 @@
 #include "E5B0.h"
 
+#include "common.h"
 #include "global.h"
+#include "zzGame.h"
 
-void func_8000D9B0() {
+void func_8000D9B0(_8000DAD0_arg0_struct* arg0) {
     D_800E69C0.unk8 = D_800E69C0.unkA;
     
     switch (D_800E69C0.unk8) {               
@@ -11,30 +13,30 @@ void func_8000D9B0() {
         case 0x78:
         case 0x82:
         case 0x8C:
-            func_8000E320();
+            func_8000E320(arg0);
             break;
         case 0x64:
-            func_8000DF50();
+            func_8000DF50(arg0);
             break;
         case 0x97:
         case 0x98:
         case 0x99:
         case 0xC8:
         case 0x1F4:
-            func_8000DAD0();
+            func_8000DAD0(arg0);
             break;
         case 0x1F5:
             break;
         case 0x1F6:
             break;
         case 0x12C:
-            func_8000E72C();
+            func_8000E72C(arg0);
             break;
         case 0x3E7:
-            func_8000E9E8();
+            func_8000E9E8(arg0);
             break;
         case 0x7D0:
-            func_8000ED00();
+            func_8000ED00(arg0);
             break;
     }
 }

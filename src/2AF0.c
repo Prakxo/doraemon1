@@ -55,7 +55,7 @@ void func_80001EF0(D_800F3958_struct* arg0){
                     while(!D_800E69C0.unk1C);
 
                     s4 = D_800E69C0.unk10;
-                    D_800E69C0.unk18[4] = 0;
+                    D_800E69C0.unk1C = 0;
 
                     var_s0->unk7 = 1;
                     D_800E69C0.unk4 = var_s0->unk7;

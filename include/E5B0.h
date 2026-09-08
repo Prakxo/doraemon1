@@ -3,6 +3,8 @@
 
 #include "ultra64.h"
 
-void func_8000D9B0(void);
+struct _8000DAD0_arg0_struct;
+
+void func_8000D9B0(struct _8000DAD0_arg0_struct*);
 
 #endif
